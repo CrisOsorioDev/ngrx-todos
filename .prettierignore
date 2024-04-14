@@ -1,3 +1,19 @@
-# Ignore artifacts:
-build
+.eslintrc.json
+.stylelintrc.json
+angular.json
+e2e\protractor.conf.js
+e2e\src\app.e2e-spec.ts
+e2e\src\app.po.ts
+e2e\tsconfig.json
+index-html-transform.ts
+karma-ci.conf.js
+karma.conf.js
+package-lock.json
+package.json
+README.md
+.angular
 coverage
+dist
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
