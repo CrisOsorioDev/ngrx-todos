@@ -12,9 +12,9 @@
     "lint": "ng lint"
   },
   "lint-staged": {
-    "src/**/*.{ts,html,scss}": "prettier --write",
+    "src/**/*.(ts|html|scss)": "prettier --write",
     "src/**/*.scss": "stylelint",
-    "src/**/*.ts": "eslint"
+    "src/**/*.(ts|html)": "eslint --fix"
   },
   "private": true,
   "dependencies": {
