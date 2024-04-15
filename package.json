@@ -9,7 +9,9 @@
     "test": "ng test",
     "prepare": "husky",
     "stylelint-scss-check": "stylelint-config-prettier-scss-check",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "release": "standard-version && git push --follow-tags --no-verify",
+    "pre-push": "npm run release"
   },
   "lint-staged": {
     "src/**/*.(ts|html|scss)": "prettier --write",
@@ -50,6 +52,8 @@
     "@angular-eslint/template-parser": "17.3.0",
     "@angular/cli": "^17.3.3",
     "@angular/compiler-cli": "^17.3.0",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "@ngrx/eslint-plugin": "^17.2.0",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -72,6 +76,7 @@
     "postcss-angular": "^1.0.3",
     "postcss-scss": "^4.0.9",
     "prettier": "3.2.5",
+    "standard-version": "^9.5.0",
     "stylelint": "^16.3.1",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard": "^36.0.0",
