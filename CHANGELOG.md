@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/CrisOsorioDev/ngrx-todos/compare/v0.0.6...v0.1.0) (2024-08-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ui:** All components are ready and they are functional
+
+### Features
+
+* **ui:** :sparkles: Application is functional and all operations work as expected ([5c4ab60](https://github.com/CrisOsorioDev/ngrx-todos/commit/5c4ab6007d8e94fd6936956bc99e9f545aed69e1))
+
 ### [0.0.6](https://github.com/CrisOsorioDev/ngrx-todos/compare/v0.0.5...v0.0.6) (2024-04-15)
 
 
