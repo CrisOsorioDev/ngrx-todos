@@ -16,7 +16,8 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:import/typescript"
       ],
       "rules": {
         "@angular-eslint/component-selector": [
@@ -506,7 +507,12 @@
           "any"
         ]
       },
-      "plugins": ["rxjs-angular", "rxjs", "sonarjs"]
+      "plugins": ["rxjs-angular", "rxjs", "sonarjs"],
+      "settings": {
+        "node": {
+          "tryExtensions": [".js", ".node", ".ts"]
+        }
+      }
     },
     {
       "files": ["*.html"],

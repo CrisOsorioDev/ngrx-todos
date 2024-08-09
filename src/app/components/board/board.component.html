@@ -3,14 +3,13 @@
     <h1>TODO List Angular NGRX</h1>
     <app-add-task></app-add-task>
     <div class="tasks-list">
-      <app-task></app-task>
-      <app-task></app-task>
-      <app-task></app-task>
-      <app-task></app-task>
-      <app-task></app-task>
+      @for (task of tasks(); track task.id) {
+        <app-task [task]="task"></app-task>
+      }
     </div>
     <div class="bottom">
       <app-remove-completed-tasks></app-remove-completed-tasks>
+      <app-reset-all-tasks></app-reset-all-tasks>
       <app-remove-all-tasks></app-remove-all-tasks>
     </div>
   </mat-card-content>

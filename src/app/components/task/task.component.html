@@ -1,4 +1,17 @@
 <div class="task-container">
-  <mat-checkbox class="example-margin">Task name here</mat-checkbox>
-  <button mat-stroked-button color="accent">Remove</button>
+  <mat-checkbox
+    class="example-margin"
+    [checked]="task.isCompleted"
+    (change)="markAsCompleted(task.id)"
+  ></mat-checkbox>
+  @if (task.isCompleted) {
+    <p>
+      <del>{{ task.name }}</del>
+    </p>
+  } @else {
+    <p>{{ task.name }}</p>
+  }
+  <button mat-stroked-button color="accent" (click)="removeTask(task.id)">
+    Remove
+  </button>
 </div>

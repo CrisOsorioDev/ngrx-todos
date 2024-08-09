@@ -2,19 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Store } from '@ngrx/store';
-import { removeAllTasks } from 'src/app/store/task.actions';
+import { resetAllTasks } from 'src/app/store/task.actions';
 
 @Component({
-  selector: 'app-remove-all-tasks',
+  selector: 'app-reset-all-tasks',
   standalone: true,
   imports: [CommonModule, MatButtonModule],
-  templateUrl: './remove-all-tasks.component.html',
-  styleUrl: './remove-all-tasks.component.scss',
+  templateUrl: './reset-all-tasks.component.html',
+  styleUrl: './reset-all-tasks.component.scss',
 })
-export class RemoveAllTasksComponent {
+export class ResetAllTasksComponent {
   store = inject(Store);
 
-  removeAllTasks(): void {
-    this.store.dispatch(removeAllTasks());
+  resetTasks(): void {
+    this.store.dispatch(resetAllTasks());
   }
 }

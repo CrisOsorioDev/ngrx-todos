@@ -1,7 +1,14 @@
 <div class="add-task-container">
   <mat-form-field class="input-width">
     <mat-label>Task name</mat-label>
-    <input matInput placeholder="Enter a new task" value="" />
+    <input matInput [formControl]="formCtrl" placeholder="Enter a new task" />
   </mat-form-field>
-  <button mat-flat-button color="accent">Add task</button>
+  <button
+    mat-flat-button
+    color="accent"
+    (click)="addTask()"
+    [disabled]="formCtrl.invalid"
+  >
+    Add task
+  </button>
 </div>
